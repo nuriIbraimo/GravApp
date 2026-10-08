@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "GravApp",
+    "slug": "gravapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nuriibraimo.gravapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "com.nuriibraimo.gravapp",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Permitir ao GravApp acessar o microfone."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permitir ao GravApp acessar as fotos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ed81fd7a-bb70-44eb-a163-3d898b65e2a3"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ed81fd7a-bb70-44eb-a163-3d898b65e2a3"
+    }
+  }
+}

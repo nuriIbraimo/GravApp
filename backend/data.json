@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1791439451098",
+    "nome": "Áudio 3",
+    "duracao": 2,
+    "data": "08/10/2026",
+    "hora": "08:04",
+    "uri": "/uploads/audio-1791439451321-831847302.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-08T06:04:11.401Z"
+  },
+  {
+    "id": "1791407484964",
+    "nome": "Teste com API",
+    "duracao": 29,
+    "data": "07/10/2026",
+    "hora": "23:11",
+    "uri": "/uploads/audio-1791407484319-196657686.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-07T21:11:24.384Z"
+  },
+  {
+    "id": "1790781025313",
+    "nome": "Áudio 1",
+    "duracao": 3,
+    "data": "30/09/2026",
+    "hora": "17:10",
+    "uri": "/uploads/audio-1791407433901-249180020.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-07T21:10:33.918Z"
+  }
+]

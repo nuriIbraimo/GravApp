@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1791442407672",
+    "nome": "Último teste python",
+    "duracao": 1.0,
+    "data": "08/10/2026",
+    "hora": "08:53",
+    "uri": "/uploads/audio-1791442407672-1791442998.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-08T09:03:18.088464"
+  },
+  {
+    "id": "1790781025313",
+    "nome": "Áudio 1",
+    "duracao": 3.0,
+    "data": "30/09/2026",
+    "hora": "17:10",
+    "uri": "/uploads/audio-1790781025313-1791442427.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-08T08:53:47.232491"
+  },
+  {
+    "id": "1791407484964",
+    "nome": "Teste com API",
+    "duracao": 29.0,
+    "data": "07/10/2026",
+    "hora": "23:11",
+    "uri": "/uploads/audio-1791407484964-1791442425.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-08T08:53:45.964330"
+  },
+  {
+    "id": "1791439451098",
+    "nome": "Áudio 3",
+    "duracao": 2.0,
+    "data": "08/10/2026",
+    "hora": "08:04",
+    "uri": "/uploads/audio-1791439451098-1791442424.m4a",
+    "imagem": null,
+    "criadoEm": "2026-10-08T08:53:44.664133"
+  }
+]
