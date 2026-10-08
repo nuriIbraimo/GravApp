@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gravapp-backend
+    env: python
+    rootDir: backend_python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app
+    envVars:
+      - key: PORT
+        value: 3000

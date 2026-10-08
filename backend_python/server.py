@@ -251,6 +251,8 @@ def payload_too_large(e):
 
 
 if __name__ == '__main__':
-    print("🚀 Servidor Backend Python (Flask) do GravApp a rodar na porta 3000...")
-    print("http://localhost:3000/api/audios")
-    app.run(host='0.0.0.0', port=3000, debug=True)
+    port = int(os.environ.get('PORT', 3000))
+    print(f"🚀 Servidor Backend Python (Flask) do GravApp a rodar na porta {port}...")
+    print(f"http://localhost:{port}/api/audios")
+    app.run(host='0.0.0.0', port=port, debug=False)
+

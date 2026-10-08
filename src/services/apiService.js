@@ -7,23 +7,29 @@
 
 import Constants from 'expo-constants';
 
-// ============ DETEÇÃO AUTOMÁTICA DO IP ============
+// ============ CONFIGURAÇÃO DO BACKEND (RENDER / LOCAL) ============
+const RENDER_URL = 'https://gravapp-backend.onrender.com';
+
 const getApiUrl = () => {
-  // Em produção (build final), usa o URL público
-  if (!__DEV__) {
-    return 'https://gravapp-api.railway.app'; // ← (futuro) URL do backend público
+  // 1. Se houver variável de ambiente definida via Expo, usa essa
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL;
   }
 
-  // Em desenvolvimento, pega o IP do servidor Expo
-  const hostUri = Constants.expoConfig?.hostUri;
+  // 2. Em produção ou EAS Update, usa o URL do Render
+  if (!__DEV__) {
+    return RENDER_URL;
+  }
 
+  // 3. Em desenvolvimento local no Expo Go, deteta o IP da máquina
+  const hostUri = Constants.expoConfig?.hostUri;
   if (hostUri) {
     const ip = hostUri.split(':')[0];
     return `http://${ip}:3000`;
   }
 
-  // Fallback para emulador Android
-  return 'http://10.0.2.2:3000';
+  // 4. Fallback para emulador ou Render
+  return RENDER_URL;
 };
 
 const BASE_HOST = getApiUrl();
