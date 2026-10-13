@@ -1,14 +1,16 @@
 /**
  * Serviço de Comunicação REST API (apiService.js)
  * 
- * Deteta o IP do PC automaticamente usando o Expo Constants.
- * Nunca mais precisas de mudar o IP manualmente.
+ * Backend: PythonAnywhere (Python + Flask)
+ * - Em desenvolvimento: deteta o IP do PC automaticamente
+ * - Em produção: usa o URL do PythonAnywhere
  */
 
 import Constants from 'expo-constants';
 
-// ============ CONFIGURAÇÃO DO BACKEND (RENDER / LOCAL) ============
-const RENDER_URL = 'https://gravapp.onrender.com';
+// ============ CONFIGURAÇÃO DO BACKEND ============
+// URL do backend Python no PythonAnywhere
+const PRODUCTION_URL = 'https://nuriOsman123.pythonanywhere.com';
 
 const getApiUrl = () => {
   // 1. Se houver variável de ambiente definida via Expo, usa essa
@@ -16,9 +18,9 @@ const getApiUrl = () => {
     return process.env.EXPO_PUBLIC_API_URL;
   }
 
-  // 2. Em produção ou EAS Update, usa o URL do Render
+  // 2. Em produção ou EAS Update, usa o URL do PythonAnywhere
   if (!__DEV__) {
-    return RENDER_URL;
+    return PRODUCTION_URL;
   }
 
   // 3. Em desenvolvimento local no Expo Go, deteta o IP da máquina
@@ -28,8 +30,8 @@ const getApiUrl = () => {
     return `http://${ip}:3000`;
   }
 
-  // 4. Fallback para emulador ou Render
-  return RENDER_URL;
+  // 4. Fallback: usa o PythonAnywhere
+  return PRODUCTION_URL;
 };
 
 const BASE_HOST = getApiUrl();
