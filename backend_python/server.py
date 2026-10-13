@@ -68,7 +68,6 @@ def salvar_dados(dados):
     except Exception as e:
         print(f"Erro ao salvar data.json: {e}")
 
-
 # ============================================================
 # ROTA ESTÁTICA SEGURO PARA SERVIR OS UPLOADS
 # ============================================================
@@ -115,7 +114,7 @@ def criar_audio():
     """
     try:
         dados = ler_dados()
-
+        
         # Obter os campos enviados no multipart/form-data
         nome = request.form.get('nome', '')
         duracao = request.form.get('duracao', 0)

@@ -8,7 +8,7 @@
 import Constants from 'expo-constants';
 
 // ============ CONFIGURAÇÃO DO BACKEND (RENDER / LOCAL) ============
-const RENDER_URL = 'https://gravapp-backend.onrender.com';
+const RENDER_URL = 'https://gravapp.onrender.com';
 
 const getApiUrl = () => {
   // 1. Se houver variável de ambiente definida via Expo, usa essa

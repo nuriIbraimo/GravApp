@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: gravapp-backend
+    name: gravapp
     env: python
     rootDir: backend_python
     buildCommand: pip install -r requirements.txt
